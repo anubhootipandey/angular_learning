@@ -1,0 +1,16 @@
+<h1>data-binding works!</h1>
+<div class="grid grids-cols-3">
+    <div>
+        <h2>One way data binding - from .ts to .html</h2>
+    </div>
+    <div>
+        <h1>----------Interpolation------------</h1>
+        <h4>{{courseName}}</h4>
+        <input type="text" value="{{courseName}}" placeholder="Enter Text" />
+        <input type="{{inputType}}"/>
+    </div>
+    <div>
+        <h1>Property Binding</h1>
+        <div [class]="myClassName" >GoodBye</div>
+    </div>
+</div>
