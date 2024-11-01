@@ -1,16 +1,40 @@
-<h1>data-binding works!</h1>
-<div class="grid grids-cols-3">
+<h1 class="text-red-600">data-binding works!</h1>
+<div class="grid grids-cols-4 gap-10">
     <div>
-        <h2>One way data binding - from .ts to .html</h2>
+        <h2 class="font-bold text-2xl text-blue-600">One way data binding - from .ts to .html</h2>
     </div>
-    <div>
+    <div class="bg-yellow-200 p-7">
         <h1>----------Interpolation------------</h1>
         <h4>{{courseName}}</h4>
         <input type="text" value="{{courseName}}" placeholder="Enter Text" />
         <input type="{{inputType}}"/>
     </div>
-    <div>
-        <h1>Property Binding</h1>
+    <div class="bg-green-400 p-7">
+        <h2>----------------------Event binding-----------------------------</h2>
+        <button (click)="showAlert('Welcome to Angular 18')" class="font-bold px-4 py-2 rounded-lg bg-purple-900 text-white">Show welcome</button>
+        <button (click)="changeCourseName()" class="font-bold px-4 py-2 rounded-lg bg-orange-500 text-white">Change Course</button>
+    </div>
+
+    <div class="bg-pink-500 p-7">
+        <input type="text" [(ngModel)]="courseName" /> - {{courseName}}
+
+        <input type="checkbox" [(ngModel)]="isLogged"/>
+
+        <select [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Goa">Goa</option>
+            <option value="Bihar">Bihar</option>
+        </select>
+    </div>
+    <div class="bg-blue-300 p-7">
+        <h1>--------------------Property Binding-----------------------------</h1>
         <div [class]="myClassName" >GoodBye</div>
+        <input type="text" [value]="courseName">
+    </div>
+
+    <div class="bg-gray-300 p-7">
+        <h1>--------------------Signal-----------------------------</h1>
+        <h2>{{firstName()}}</h2>
     </div>
 </div>
