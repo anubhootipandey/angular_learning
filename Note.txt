@@ -1,9 +1,4 @@
 
-
-
-
-
-
 How to create components?
 --> ng generate component component_name
 --> or ng g c component_name (shortcut)
@@ -16,4 +11,13 @@ standalone--> Angular 17 feature
 -------Data Binding---------
 1.One way data binding:-
 ---> from .ts to .html (interpolation, proper binding)
----> 
+---> from .html to ts (event binding)
+
+2.Two way data binding:-
+---> using ngModel
+
+3.using signal:-
+---> changing signal value using set.
+
+
+
