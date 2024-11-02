@@ -1,0 +1,19 @@
+
+
+
+
+
+
+How to create components?
+--> ng generate component component_name
+--> or ng g c component_name (shortcut)
+
+
+selector---> unique identifier
+standalone--> Angular 17 feature
+
+
+-------Data Binding---------
+1.One way data binding:-
+---> from .ts to .html (interpolation, proper binding)
+---> 
