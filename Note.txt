@@ -20,4 +20,4 @@ standalone--> Angular 17 feature
 ---> changing signal value using set.
 
 
-
+---------Directives-----------------
