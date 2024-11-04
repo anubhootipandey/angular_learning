@@ -1,0 +1,16 @@
+<div class="mt-2 p-2 bg-gray-500 font-bold text-2xl text-center mx-auto text-white rounded">
+    <h1>------------------Attribute Directive------------------</h1>
+    <p>ngClass, ngStyle</p>
+</div>
+
+<div class="m-10">
+    <div class="p-3 text-center" [ngClass]="div1BgColor">
+        <h4>Div 1</h4>
+    </div>
+</div>
+
+<div>
+    <button class="px-4 py-2 border rounded-lg m-2 text-red-500"  (click)="addRedClass()">Add Red</button>
+    <button class="px-4 py-2 border rounded-lg m-2 text-blue-500" (click)="addBlueClass()">Add Blue</button>
+</div>
+
