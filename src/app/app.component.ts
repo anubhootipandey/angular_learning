@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { StructuralDirectiveComponent } from './components/directive/structural-directive/structural-directive.component';
-import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
-// import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, StructuralDirectiveComponent, AttributeDirectiveComponent],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

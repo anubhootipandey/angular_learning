@@ -1,0 +1,51 @@
+<div class="m-6 p-2 text-center text-fuchsia-700 text-xl bg-fuchsia-200">
+    <h3>Control Flow Structure</h3>
+    <h4>
+        <span>&#64;</span>for
+    </h4>
+</div>
+
+<div class="m-3 flex gap-3">
+    <div>
+        <ul>
+            @for(item of cityArray; track $index){
+                <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+    <div>
+        <select>
+            @for(item of cityArray; track $index){
+                <option> {{item}} </option>
+            }
+        </select>
+    </div>
+    <div>
+        <select>
+            @for(std of studentList; track $index){
+                <option [value]="std.id"> {{std.name}} </option>
+            }
+        </select>
+    </div>
+</div>
+
+<div class="mx-10">
+    <thead>
+        <tr class="grid grid-cols-6">
+            <th class="border p-3 text-center">Sr No.</th>
+            <th class="border p-3 text-center">Name</th>
+            <th class="border p-3 text-center">City</th>
+            <th class="border p-3 text-center">isActive</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(std of studentList; track $index){
+            <tr class="grid grid-cols-6">
+                <td class="border p-3 text-center"> {{$index+1}} </td>
+                <td class="border p-3 text-center"> {{std.name}} </td>
+                <td class="border p-3 text-center"> {{std.city}} </td>
+                <td class="border p-3 text-center"> {{std.isActive}} </td>
+            </tr>
+        }
+    </tbody>
+</div>

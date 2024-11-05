@@ -1,0 +1,43 @@
+<div class="m-6 p-2 text-center text-pink-700 text-xl bg-pink-200">
+    <h3>Control Flow Structure</h3>
+    <h4>
+        <span>&#64;</span>switch
+    </h4>
+</div>
+
+<div class="mx-10">
+    <div>
+        <input type="text" class="border p-2 rounded" placeholder="Enter something..." [(ngModel)]="dayNumber" />
+    </div>
+    <div>
+        Day Name is :
+        @switch(dayNumber){
+            @case('1'){
+                <span>Monday</span>
+            }
+            @case('2'){
+                <span>Tuesday</span>
+            }
+            @case('3'){
+                <span>Wednesday</span>
+            }
+            @case('4'){
+                <span>Thursday</span>
+            }
+            @case('5'){
+                <span>Friday</span>
+            }
+            @case('6'){
+                <span>Saturday</span>
+            }
+            @case('7'){
+                <span>Sunday</span>
+            }
+            @default{
+                <span class="text-red-600">Wrong Entry!</span>
+            }
+        }
+    </div>
+</div>
+
+

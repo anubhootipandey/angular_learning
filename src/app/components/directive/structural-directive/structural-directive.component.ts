@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-structural-directive',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './structural-directive.component.html',
   styleUrl: './structural-directive.component.css'
 })
@@ -20,6 +21,8 @@ export class StructuralDirectiveComponent {
   isActive: boolean = false;
   selectedState: string  = "";
 
+  constructor(private router: Router){}  //--->dependency injection
+
   cityArray: string [] = ['Pune', 'Mumbai', 'Nagpur', 'Thane'];
 
   studentList: any[] = [
@@ -29,6 +32,10 @@ export class StructuralDirectiveComponent {
     { id: 43, name:'DDD', city:'Nagpur', isActive: false },
     { id: 54, name:'EEE', city:'Thane', isActive: false },
   ]
+
+  navigateToAttribute(){
+    this.router.navigateByUrl("attribute-dir");
+  }
 
   showDiv1(){
     this.isDiv1Visible = true;
