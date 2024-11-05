@@ -7,6 +7,7 @@ import { Routes } from '@angular/router';
 import { IfelseComponent } from './components/control-flow/ifelse/ifelse.component';
 import { ForComponent } from './components/control-flow/for/for.component';
 import { SwitchComponent } from './components/control-flow/switch/switch.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 export const routes: Routes = [
     // {
@@ -40,5 +41,9 @@ export const routes: Routes = [
     {
         path: 'switch',
         component: SwitchComponent
+    },
+    {
+        path: 'pipe',
+        component: PipeComponent
     },
 ];
