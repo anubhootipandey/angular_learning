@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 gap-3 my-6 mx-10">
+    <div>
+        <button class="px-4 py-2 bg-teal-600" (click)="getAllUser()" >Get Users</button>
+    </div>
+    <div>
+        <select class="border px-4 py-2 shadow-lg">
+            @for(item of userList; track $index){
+                <option>{{item.name}}</option>
+            }
+        </select>
+    </div>
+</div>
