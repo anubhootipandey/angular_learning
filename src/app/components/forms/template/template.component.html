@@ -1,0 +1,73 @@
+<div class="mt-2 p-2 text-center mx-20 text-2xl bg-blue-300">
+    <h1>Template Form</h1>
+    <p>Using ngModel</p>
+</div>
+
+<div class="m-20">
+    <form #form="ngForm" class="border grid grid-cols-2 gap-6 rounded-lg p-6 shadow-lg">
+        <div class="flex gap-2 flex-col">
+            <label>First Name</label>
+            <input #fname="ngModel" class="border px-4 py-2 rounded-lg" name="firstName" [(ngModel)]="studentObj.firstName" type="text" required minlength="3"/>
+            <div>
+                @if((fname.touched || fname.dirty) && fname.errors?.['required']){
+                    <span class="text-red-500">This is required!</span>
+                } @else if((fname.touched || fname.dirty) && fname.errors?.['minlength']){
+                    <span class="text-red-500">Minimum 3 character's required!</span>
+                }
+            </div>
+            <!-- <div>
+                {{fname.errors|json}}
+            </div> -->
+        </div>
+        <div class="flex gap-2 flex-col">
+            <label>Last Name</label>
+            <input class="border px-4 py-2 rounded-lg" name="lastName" [(ngModel)]="studentObj.lastName" type="text"/>
+        </div>
+        <div class="flex gap-2 flex-col">
+            <label>Username</label>
+            <div>
+                <span>
+                    <span>&#64;</span>
+                </span>
+                <input class="border px-4 py-2 rounded-lg" name="userName" [(ngModel)]="studentObj.userName" type="text"/>
+            </div>
+        </div>
+        <div class="flex gap-2 flex-col">
+            <label>City</label>
+            <input class="border px-4 py-2 rounded-lg" name="city" [(ngModel)]="studentObj.city" type="text"/>
+        </div>
+        <div class="flex gap-2 flex-col">
+            <label>State</label>
+            <select class="border px-4 py-2 rounded-lg" name="state" [(ngModel)]="studentObj.state">
+                <option selected disabled>Choose...</option>
+                <option>Maharashtra</option>
+                <option>Goa</option>
+                <option>Punjab</option>
+            </select>
+        </div>
+        <div class="flex gap-2 flex-col">
+            <label>Zip</label>
+            <input class="border px-4 py-2 rounded-lg" name="zipCode" [(ngModel)]="studentObj.zipCode" type="text" />
+        </div>
+        <div>
+            <div>
+                <input name="isAcceptTerms" [(ngModel)]="studentObj.isAcceptTerms" type="checkbox" />
+                <label for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+            </div>
+        </div>
+        <div class="flex gap-3">
+            <button type="button" (click)="resetForm()" class="text-white px-4 py-2 rounded-lg bg-gray-600">Reset Form</button>
+            <button type="button" [disabled]="form.invalid" (click)="onSubmit()" class="text-white px-4 py-2 rounded-lg bg-blue-600">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="m-6 border p-4">
+    {{formValue | json}}
+</div>
+
+
+
+
